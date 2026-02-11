@@ -1,0 +1,105 @@
+┌─────────────────────────────────────────────────────────────────┐
+│         Signal Refinery UI - Next.js Project Structure          │
+│                                                                 │
+│  📁 signal-refinery-ui/                                         │
+│  ├── 📄 package.json                    Main dependencies       │
+│  ├── 📄 tsconfig.json                   TypeScript config       │
+│  ├── 📄 next.config.ts                  Next.js config          │
+│  ├── 📄 README.md                       Project documentation   │
+│  ├── 📄 SETUP_SUMMARY.md                Setup reference         │
+│  ├── 📄 .env.example                    Env template            │
+│  ├── 📄 .gitignore                      Git ignore rules        │
+│  │                                                              │
+│  └── 📁 src/                            Application source      │
+│      │                                                          │
+│      ├── 📁 app/                        Next.js App Router      │
+│      │   ├── 📄 layout.tsx              Root layout             │
+│      │   ├── 📄 page.tsx                Home page               │
+│      │   └── 📄 globals.css             Global styles           │
+│      │                                                          │
+│      ├── 📁 components/                 Reusable components     │
+│      │   ├── 📄 Header.tsx              Navigation              │
+│      │   └── 📄 Footer.tsx              Footer                  │
+│      │                                                          │
+│      ├── 📁 hooks/                      Custom React hooks      │
+│      │   └── 📄 README.md               Usage guide             │
+│      │                                                          │
+│      ├── 📁 lib/                        Library utilities       │
+│      │   └── 📄 index.ts                Helper functions        │
+│      │                                                          │
+│      ├── 📁 services/                   API & services          │
+│      │   └── 📄 README.md               Usage guide             │
+│      │                                                          │
+│      ├── 📁 types/                      TypeScript types        │
+│      │   └── 📄 index.ts                Global type defs        │
+│      │                                                          │
+│      ├── 📁 constants/                  App constants           │
+│      │   └── 📄 index.ts                Routes, API URLs, etc   │
+│      │                                                          │
+│      ├── 📁 utils/                      Utility functions       │
+│      │   └── 📄 index.ts                Helper functions        │
+│      │                                                          │
+│      └── 📁 middleware.ts               (Ready to use)          │
+│                                                                 │
+│  └── 📁 public/                         Static assets           │
+│      ├── 📁 images/                     Images                  │
+│      ├── 📁 icons/                      Icons                   │
+│      └── 📁 fonts/                      Fonts                   │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+
+✨ TECH STACK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+├─ Framework:    Next.js 16.1.6
+├─ Language:     TypeScript 5
+├─ UI Library:   React 19
+├─ Styling:      Tailwind CSS 4
+└─ Node:         18+ (recommended 20+)
+
+🚀 QUICK COMMANDS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+npm run dev          Start development server (port 3000)
+npm run build        Build for production
+npm run start        Start production server
+npm run lint         Run ESLint
+npm run type-check   Run TypeScript type checker
+npm run format       Format code with Prettier
+
+✅ FEATURES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ Full TypeScript with strict mode
+✓ Organized folder structure
+✓ Reusable component architecture
+✓ Custom hooks support
+✓ API service layer
+✓ Global type definitions
+✓ Application constants
+✓ Path aliases (@/*)
+✓ Security headers configured
+✓ Image optimization enabled
+✓ Tailwind CSS utility-first styling
+✓ React Strict Mode enabled
+
+📚 IMPORT EXAMPLES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+import { Header } from '@/components/Header';
+import { useCustom } from '@/hooks/useCustom';
+import { formatDate } from '@/utils';
+import { ROUTES } from '@/constants';
+import type { User } from '@/types';
+
+🎯 NEXT STEPS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Run: npm run dev
+2. Open: http://localhost:3000
+3. Edit: src/app/page.tsx or create components in src/components/
+4. Add your API services in src/services/
+5. Create custom hooks in src/hooks/
+
+📖 DOCUMENTATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- README.md          - Full project documentation
+- SETUP_SUMMARY.md   - Setup details and next steps
+- src/hooks/README.md        - Hook usage guide
+- src/services/README.md     - Service layer guide
+

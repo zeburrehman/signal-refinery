@@ -1,0 +1,55 @@
+# Python
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+**/.Python
+**/env/
+**/venv/
+**/.venv
+backend/pip-log.txt
+backend/pip-delete-this-directory.txt
+backend/.tox/
+backend/.coverage
+backend/.coverage.*
+backend/.cache
+backend/nosetests.xml
+backend/coverage.xml
+backend/*.cover
+backend/.hypothesis/
+backend/.pytest_cache/
+backend/.env
+backend/.env.local
+backend/.env.*.local
+**/*.db
+backend/tickers.db
+
+# Node/Next.js
+ui/node_modules/
+ui/.next/
+ui/out/
+ui/dist/
+ui/.env
+ui/.env.local
+ui/.env.*.local
+ui/.vercel
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+.env.local
+
+# Docker
+.docker/
+
+# IDE settings that shouldn't be shared
+.claude/

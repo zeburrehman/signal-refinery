@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignalRefinery</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>SignalRefinery</h1>
+
+    <div class="container">
+        <!-- Fetch Filings Form -->
+        <div class="form-container">
+            <h2>Fetch SEC Filings (10-K & 10-Q)</h2>
+            <form id="fetch-filings-form">
+                <input type="text" id="fetch-symbol" placeholder="Enter ticker symbol (e.g., AAPL)" required>
+                <button type="submit">Fetch Filings from SEC</button>
+            </form>
+            <div id="loading-indicator" class="hidden">
+                <p>Fetching filings... This may take a moment.</p>
+                <div class="spinner"></div>
+            </div>
+        </div>
+
+        <!-- Filings Display -->
+        <div class="data-container">
+            <h2>SEC Filings</h2>
+            <div id="summary-result"></div>
+        </div>
+    </div>
+
+    <!-- 10-K Filings List -->
+    <div class="container">
+        <div class="data-container">
+            <h3>10-K Reports (Annual)</h3>
+            <ul id="filings-10k-list"></ul>
+        </div>
+    </div>
+
+    <!-- 10-Q Filings List -->
+    <div class="container">
+        <div class="data-container">
+            <h3>10-Q Reports (Quarterly)</h3>
+            <ul id="filings-10q-list"></ul>
+        </div>
+    </div>
+
+    <!-- Summary Display -->
+    <div class="container">
+        <div id="summary-result"></div>
+    </div>
+
+    <!-- Financial Data Section -->
+    <div class="container">
+        <div class="form-container">
+            <h2>Extract Financial Data</h2>
+            <form id="extract-financials-form">
+                <input type="text" id="financial-symbol" placeholder="Enter ticker symbol (e.g., AAPL)" required>
+                <button type="submit">Extract Financial Statements</button>
+            </form>
+            <div id="financial-loading-indicator" class="hidden">
+                <p>Extracting financial data... This may take a minute.</p>
+                <div class="spinner"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Financial Data Display -->
+    <div class="container">
+        <div class="data-container" style="width: 100%;">
+            <h2>Financial Data</h2>
+            <div id="financials-tabs">
+                <button class="tab-btn active" data-statement="income_statement">Income Statement</button>
+                <button class="tab-btn" data-statement="balance_sheet">Balance Sheet</button>
+                <button class="tab-btn" data-statement="cash_flow">Cash Flow</button>
+            </div>
+            <div id="financials-display"></div>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
