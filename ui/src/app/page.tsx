@@ -1,3 +1,5 @@
+import { HealthCheck } from "@/components/HealthCheck";
+
 export default function Home() {
   return (
     <div className="space-y-12">
@@ -11,6 +13,11 @@ export default function Home() {
             A modern, type-safe application built with Next.js and TypeScript
           </p>
         </div>
+      </section>
+
+      {/* Health Check Section */}
+      <section>
+        <HealthCheck />
       </section>
 
       {/* Features Section */}

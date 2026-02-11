@@ -2,10 +2,26 @@ from sqlalchemy import create_engine, Column, Integer, String, Date, DateTime, U
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from datetime import datetime
+import os
+from dotenv import load_dotenv
 
-DATABASE_URL = "sqlite:///./tickers.db"
+load_dotenv()
 
-engine = create_engine(DATABASE_URL)
+# Use PostgreSQL in Docker, fallback to SQLite for local development
+DATABASE_URL = os.getenv(
+    "DATABASE_URL",
+    "sqlite:///./tickers.db"
+)
+
+# Ensure the database URL is in the correct format for SQLAlchemy
+if DATABASE_URL.startswith("postgresql://"):
+    DATABASE_URL = DATABASE_URL.replace("postgresql://", "postgresql+psycopg2://", 1)
+
+engine = create_engine(
+    DATABASE_URL,
+    pool_pre_ping=True,  # Verify connections before using them
+    pool_recycle=3600,   # Recycle connections after 1 hour
+)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 
